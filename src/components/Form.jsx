@@ -7,10 +7,10 @@ export default function Form() {
 
     return (
         <>
-            <h2>Realize seu login</h2>        
             <form onSubmit={handleSubmit((data) => {
                 console.log(data)
             })}>
+                <h2>Realize seu login</h2>        
                 <input type="text" {...register("firstName", { required: 'Campo obrigatório!' })} placeholder="Nome de usuário" />
                 <p>{errors.firstName?.message}</p>
 

@@ -1,0 +1,31 @@
+$white: #fff;
+$black: #333;
+
+body {
+    background-color: $white;
+    background-image: url('../assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h2 {
+    color: $black;
+}
+
+#root {
+    margin: 0 auto;
+}
+
+form {
+    background-color: $white;
+    border-radius: 12px;
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+
+    input {
+        width: 80%;
+    }
+}
