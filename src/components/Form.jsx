@@ -21,7 +21,7 @@ export default function Form() {
                     }})} placeholder="Senha" />
                     <p>{errors.password?.message}</p>
 
-                    <input type="submit" className="btn-submit-form" />
+                    <input type="submit" className="btn-submit-form" value="Entrar" />
                 </div>
             </form> 
         </>
