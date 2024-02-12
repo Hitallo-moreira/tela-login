@@ -32,9 +32,9 @@ form {
     background-color: $white;
     border-radius: 12px;
     height: auto;
-    width: 290px;
+    width: 350px;
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
 
     .form-info {
         width: 90%;
@@ -85,10 +85,10 @@ form {
         width: 80%;
 
         .form-info {
-            width: 95%;
-            
+            width: 100%;
+
             input {
-                height: 50px;
+                height: 56px;
             }
         }
     }
