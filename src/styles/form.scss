@@ -2,6 +2,9 @@ $white: #fff;
 $black: #333;
 $gray: #d9d9d9;
 
+$layout-breakpoint-small: 480px;
+$layout-breakpoint-medium: 768px;
+
 body {
     background-color: $white;
     background-image: url('../assets/background.jpg');
@@ -16,7 +19,11 @@ h2 {
 }
 
 #root {
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
 }
 
 form {
@@ -24,13 +31,17 @@ form {
     justify-content: center;
     background-color: $white;
     border-radius: 12px;
-    height: 300px;
-    width: 300px;
+    height: auto;
+    width: 290px;
     text-align: center;
     padding: 20px;
 
     .form-info {
         width: 90%;
+
+        h2 {
+            margin-top: 0;
+        }
 
         input {
             height: 48px;
@@ -46,7 +57,7 @@ form {
             caret-color: $black;
             margin-bottom: 10px;
         }
-    
+
         .btn-submit-form {
             color: $white;
             font-weight: 400;
@@ -54,17 +65,31 @@ form {
             background-color: #3066BE;
             cursor: pointer;
             transition: .3s;
-    
+
             &:hover {
                 background-color: #2154a5;
             }
         }
-    
+
         p {
             color: red;
             font-size: 14px;
             margin: 0 0 5px 0;
             text-align: left;
+        }
+    }
+}
+
+@media (max-width: $layout-breakpoint-small) {
+    form {
+        width: 80%;
+
+        .form-info {
+            width: 95%;
+            
+            input {
+                height: 50px;
+            }
         }
     }
 }
