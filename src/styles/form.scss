@@ -93,6 +93,14 @@ body {
     }
 }
 
+@media (max-width: $layout-breakpoint-medium) {
+    .login {
+        .image {
+            order: 2;
+        }
+    }
+}
+
 
 @media (max-width: $layout-breakpoint-small) {
     body {
@@ -104,7 +112,6 @@ body {
 
         .login {
             .image {
-                order: 2;
                 width: 350px;
             }
 
