@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { auth } from '../../firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from "react-router-dom";
+import loginImage from "../assets/login.svg";
 
 export default function Form() {
     const {register, handleSubmit, formState: {errors} } = useForm(); 
@@ -17,20 +18,26 @@ export default function Form() {
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="form-info">
-                <h2>Faça seu Login</h2>        
-                <input type="text" {...register("email", { required: 'Campo obrigatório!' })} placeholder="Nome de usuário" />
-                <p>{errors.firstName?.message}</p>
-
-                <input type="password" {...register("password", { required: 'Campo obrigatório!', minLength: {
-                    value: 6,
-                    message: "Insira o minimo de 6 caracteres" 
-                }})} placeholder="Senha" />
-                <p>{errors.password?.message}</p>
-
-                <input type="submit" className="btn-submit-form" value="Entrar" />
+        <div className="login">
+            <div className="image">
+                <img src={loginImage} />        
             </div>
-        </form> 
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <div className="form-info">
+                    <h2>Login</h2>        
+                    <span>Por favor, insira suas informações</span>
+                    <input type="text" {...register("email", { required: 'Campo obrigatório!' })} placeholder="Nome de usuário" />
+                    <p>{errors.firstName?.message}</p>
+
+                    <input type="password" {...register("password", { required: 'Campo obrigatório!', minLength: {
+                        value: 6,
+                        message: "Insira o minimo de 6 caracteres" 
+                    }})} placeholder="Senha" />
+                    <p>{errors.password?.message}</p>
+
+                    <input type="submit" className="btn-submit-form" value="Entrar" />
+                </div>
+            </form>
+        </div>
     )
 }

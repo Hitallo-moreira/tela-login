@@ -7,79 +7,98 @@ $layout-breakpoint-medium: 768px;
 
 body {
     background-color: $white;
-    background-image: url('../assets/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     font-family: 'Inter';
     overflow-x: hidden;
 }
 
-h2 {
-    color: $black;
-}
-
 #root {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     width: 100%;
 }
 
-form {
+.login {
     display: flex;
     justify-content: center;
-    background-color: $white;
-    border-radius: 12px;
-    height: auto;
-    width: 350px;
-    text-align: center;
-    padding: 40px 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
 
-    .form-info {
-        width: 90%;
+    .image {
+        height: auto;
+        width: 500px;
+    }
 
-        h2 {
-            margin-top: 0;
-        }
+    form {
+        display: flex;
+        justify-content: center;
+        background-color: $white;
+        border-radius: 12px;
+        height: 82%;
+        width: 400px;
+        padding: 40px 20px;
+        margin-right: 0.85rem;
+    
+        .form-info {
+            width: 90%;
+            text-align: center;
 
-        input {
-            height: 48px;
-            width: 95%;
-            border: none;
-            border-radius: 10px;
-            outline: none;
-            padding-left: 10px;
-            font-size: 16px;
-            color: #000;
-            font-weight: 400;
-            background-color: $gray;
-            caret-color: $black;
-            margin-bottom: 10px;
-        }
-
-        .btn-submit-form {
-            color: $white;
-            font-weight: 400;
-            width: 100%;
-            background-color: #3066BE;
-            cursor: pointer;
-            transition: .3s;
-
-            &:hover {
-                background-color: #2154a5;
+            h2 {
+                font-size: 32px;
+                color: $black;
+                margin: 0 0 5px 0;
+                text-align: center;
             }
-        }
-
-        p {
-            color: red;
-            font-size: 14px;
-            margin: 0 0 5px 0;
-            text-align: left;
+    
+            h2,
+            input {
+                color: $black;
+            }
+    
+            span {
+                color: #808080;
+            }
+    
+            input {
+                height: 50px;
+                width: 96%;
+                border: 1px solid $gray;
+                border-radius: 10px;
+                outline: none;
+                padding-left: 10px;
+                font-size: 16px;
+                font-weight: 400;
+                background-color: unset;
+                caret-color: $black;
+                margin-bottom: 10px;
+            }
+    
+            input[type="text"] {
+                margin-top: 20px;
+            }
+    
+            .btn-submit-form {
+                color: $white;
+                font-weight: 400;
+                width: 100%;
+                background-color: #3066BE;
+                cursor: pointer;
+                transition: .3s;
+    
+                &:hover {
+                    background-color: #407BFF;
+                }
+            }
+    
+            p {
+                color: red;
+                font-size: 14px;
+                margin: 0 0 5px 0;
+                text-align: left;
+            }
         }
     }
 }
+
 
 @media (max-width: $layout-breakpoint-small) {
     body {
@@ -89,20 +108,28 @@ form {
             align-items: flex-start;
         }
 
-        form {
-            width: 85%;
-            margin-top: 5rem;
-    
-            .form-info {
-                width: 100%;
+        .login {
+            .image {
+                order: 2;
+                width: 350px;
+            }
 
-                h2 {
-                    font-size: 28px;
-                }
+            form {
+                width: 87%;
+                margin-top: 2rem;
+                padding-bottom: 0;
+        
+                .form-info {
+                    width: 100%;
     
-                input {
-                    height: 60px;
-                    margin-bottom: 13px;
+                    h2 {
+                        font-size: 28px;
+                    }
+        
+                    input {
+                        height: 60px;
+                        margin-bottom: 13px;
+                    }
                 }
             }
         }
