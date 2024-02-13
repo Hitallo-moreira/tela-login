@@ -26,8 +26,8 @@ export default function Form() {
                 <div className="form-info">
                     <h2>Login</h2>        
                     <span>Por favor, insira suas informações</span>
-                    <input type="text" {...register("email", { required: 'Campo obrigatório!' })} placeholder="Nome de usuário" />
-                    <p>{errors.firstName?.message}</p>
+                    <input type="text" {...register("email", { required: 'Campo obrigatório!' })} placeholder="Email" />
+                    <p>{errors.email?.message}</p>
 
                     <input type="password" {...register("password", { required: 'Campo obrigatório!', minLength: {
                         value: 6,
