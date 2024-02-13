@@ -94,7 +94,7 @@ body {
     }
 }
 
-@media (max-width: $layout-breakpoint-medium) {
+@media (max-width: $layout-breakpoint-large) {
     .login {
         .image {
             order: 2;
@@ -135,5 +135,12 @@ body {
                 }
             }
         }
+    }
+}
+
+@media screen and (min-width: $layout-breakpoint-small) and (max-width: $layout-breakpoint-large) {
+    #root {
+        display: flex;
+        align-items: center;
     }
 }
