@@ -1,17 +1,18 @@
 import { useForm } from "react-hook-form";
 import { auth } from '../../firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
+import { useNavigate } from "react-router-dom";
 
 export default function Form() {
     const {register, handleSubmit, formState: {errors} } = useForm(); 
+    const navigate = useNavigate();
 
     const onSubmit = async (data) => {
         try {
             await signInWithEmailAndPassword(auth, data.email, data.password);
-            
-            console.log("Usuário autenticado com sucesso!");
+            navigate("/sucesso");
         } catch (error) {
-            console.error('Erro ao fazer login:', error.message);
+            alert("Informações incorretas, revise e tente novamente");
         }
     };
 
