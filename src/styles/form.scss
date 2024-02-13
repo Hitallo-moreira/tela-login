@@ -139,8 +139,7 @@ body {
 }
 
 @media screen and (min-width: $layout-breakpoint-small) and (max-width: $layout-breakpoint-large) {
-    #root {
-        display: flex;
-        align-items: center;
+    .login {
+        margin-top: 5rem;
     }
 }
