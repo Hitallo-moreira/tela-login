@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Form from "./components/Form";
-import SucessPage from "./pages/Sucesspage";
+import SucessPage from "./pages/SucessPage.jsx";
 
 function AppRoutes() {
   return (
