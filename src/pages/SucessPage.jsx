@@ -1,6 +1,13 @@
+import sucessImage from "../assets/sucess.svg"
+
 function SucessPage() {
     return (
-        <h1>Sucessoooo</h1>
+        <div className="sucesso">
+            <h1>Login realizado com sucesso!</h1>
+            <div className="image">
+                <img src={sucessImage} alt="sucess image" />
+            </div>
+        </div>
     )
 }
 
