@@ -1,0 +1,40 @@
+@import '../styles/variables.scss';
+
+.sucesso {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    
+    h1 {
+        color: #51b671;
+        font-size: 36px;
+        margin-bottom: 2rem;
+    }
+
+    .image {
+        img {
+            height: auto;
+            width: 400px;
+        }
+    }
+}
+
+@media (max-width: $layout-breakpoint-small) {
+    .sucesso {
+        margin: 3rem 1rem;
+
+        .image {
+            img {
+                height: auto;
+                width: 300px;
+            }
+        }
+
+        h1 {
+            color: #51b671;
+            font-size: 32px;
+        }
+    }
+}
