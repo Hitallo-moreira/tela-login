@@ -1,4 +1,9 @@
-@import '../styles/variables.scss';
+$white: #fff;
+$black: #333;
+$gray: #d9d9d9;
+
+$layout-breakpoint-small: 480px;
+$layout-breakpoint-large: 1024px;
 
 body {
     background-color: $white;
