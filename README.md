@@ -5,7 +5,7 @@
   <a href="#tecnologias">Tecnologias utilizadas</a>
 </p>
 <h4 align="center">
-	Acesse em: <a href="https://hratingcomponent.netlify.app/" target="_blank">Tela de login</a>
+	Acesse em: <a href="https://hratingcomponent.netlify.app/](https://tela-login-black.vercel.app/" target="_blank">Tela de login</a>
 </h4>
 
 <h2 id="instalacao">Instalação</h2>
